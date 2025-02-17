@@ -36,7 +36,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     <header className="w-full flex flex-row justify-between p-3 md:p-5 md:fixed md:z-20">
       <button
         onClick={toggleTheme}
-        className={` cursor-pointer rounded-md p-1 ${bgTheme}`}
+        className={`cursor-pointer rounded-md p-1 ${bgTheme}`}
       >
         <SunMoon size={18} />
       </button>
@@ -57,7 +57,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
           className={`flex items-center justify-center gap-1 px-1.5 py-1 rounded-md ${bgTheme}`}
         >
           <Clock size={12} />
-          <time className="text-[10px]">{time}</time>
+          <time cz-shortcut-listen="true" className="text-[10px]">{time}</time>
         </div>
       </section>
     </header>
