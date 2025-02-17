@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Experience = () => {
-  return (
-    <div>Experience</div>
-  )
+interface ExperienceProps {
+  theme: string;
 }
 
-export  { Experience }
+const Experience = ({ theme }: ExperienceProps) => {
+  return (
+    <>
+      <section>{theme}</section>
+    </>
+  );
+};
+
+export { Experience };

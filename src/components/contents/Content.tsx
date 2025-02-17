@@ -10,15 +10,15 @@ const Content = ({ theme }: ContentProps) => {
   return (
     <main className="min-h-screen py-16 md:py-32 px-6 sm:px-0 justify-start items-center max-w-xl mx-auto flex w-full flex-col gap-3">
       <motion.div
-         initial={{ opacity: 0, y: 30 }} // Slightly less offset for a smoother start
+         initial={{ opacity: 0, y: 30 }}
          animate={{ opacity: 1, y: 0 }}
-         exit={{ opacity: 0, y: -30 }} // Reduced offset on exit
+         exit={{ opacity: 0, y: -30 }} 
          transition={{
-           duration: 0.8, // Extended duration for a softer animation
-           ease: [0.43, 0.13, 0.23, 0.96] // Custom easing curve for smooth transitions
+           duration: 0.8, 
+           ease: [0.43, 0.13, 0.23, 0.96]
          }}
       >
-        <Description theme={theme}></Description>
+        <Description theme={theme}/>
       </motion.div>
     </main>
   );
