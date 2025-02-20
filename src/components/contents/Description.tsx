@@ -7,6 +7,12 @@ import {
   CardTitle,
 } from "../ui/Card";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/Avatar";
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "../ui/Tooltip";
 
 interface DescriptionProps {
   theme: string;
@@ -15,28 +21,50 @@ interface DescriptionProps {
 const Description = ({ theme }: DescriptionProps) => {
   return (
     <>
-      <section className="w-full flex items-center justify-center ">
+      <section className="w-full flex items-center justify-center">
         <Card
-          className={`w-full flex items-center justify-between  border-none p-0 bg-${theme} text-${theme}-foreground ${
-            theme === "secondary" ? "shadow-sm" : ""
-          }`}
+          className={`w-full flex items-center justify-between border-none shadow-none p-0 bg-${theme} text-${theme}-foreground`}
         >
           <CardHeader>
-            <CardTitle>Smoeury Songvat</CardTitle>
-            <CardDescription>Backend Developer</CardDescription>
+            <CardTitle className="text-2xl font-extrabold font-mono tracking-wide ">
+              Smoeury Songvat
+            </CardTitle>
+            <CardDescription >
+              {`<Backend Developer>`}
+            </CardDescription>
           </CardHeader>
-          <CardContent className="p-0 relative">
-            <Avatar className="w-16 h-16 hover:bg-slate-400">
-              <AvatarImage src="https://avatars.githubusercontent.com/u/139366956?v=4" />
-              <AvatarFallback>Profile</AvatarFallback>
-            </Avatar>
-            <span className="size-4 absolute right-0 bottom-0 rounded-full border border-background bg-green-300"></span>
-          </CardContent>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                >
+                  <CardContent className="p-0 relative">
+                    <Avatar className="w-16 h-16">
+                      <AvatarImage src="https://avatars.githubusercontent.com/u/139366956?v=4" />
+                      <AvatarFallback>Profile</AvatarFallback>
+                    </Avatar>
+                    <span className="size-4 absolute right-0 bottom-0 rounded-full border border-background bg-green-300"></span>
+                  </CardContent>
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <button onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/smoeury-songvat-a79aa0261",
+                      "_blank"
+                    )
+                  }>
+                  I&apos;m online<span className="text-[11px]">🟢</span>,
+                  let&apos;s connect now
+                </button>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </Card>
       </section>
       <section className="w-full flex items-center justify-center">
-        <article className="px-6 text-wrap text-xl font-mono">
-          Passionate about building efficient, scalable solutions that drive
+        <article className="px-6 text-wrap text-2xl font-light">
+          👨‍💻 Passionate about building efficient, scalable solutions that drive
           seamless digital experiences.
           <span className="text-slate-400">
             Focused on performance, reliability, and clean code, with a

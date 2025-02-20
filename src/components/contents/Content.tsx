@@ -1,16 +1,29 @@
-import React from 'react'
-import { Description } from './Description';
+import React from "react";
+import { Description } from "./Description";
+import { motion } from "motion/react";
+import { Education } from "./Education";
 
 interface ContentProps {
-    theme: string;
+  theme: string;
 }
 
-const Content = ({theme}: ContentProps) => {
+const Content = ({ theme }: ContentProps) => {
   return (
-    <main className="min-h-screen py-16 md:py-32 px-6 sm:px-0 justify-start items-center max-w-xl mx-auto flex w-full flex-col gap-4">
-    <Description theme={theme}></Description>
-  </main>
-  )
-}
+    <main className="min-h-screen py-16 md:py-32 px-6 sm:px-0 justify-start items-center max-w-xl mx-auto flex w-full flex-col gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{
+          duration: 0.8,
+          ease: [0.43, 0.13, 0.23, 0.96],
+        }}
+      >
+        <Description theme={theme} />
+        <Education theme={theme} />
+      </motion.div>
+    </main>
+  );
+};
 
-export { Content }
+export { Content };
