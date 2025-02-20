@@ -1,12 +1,13 @@
 import { Database, Server } from "lucide-react";
 import React from "react";
-import { Card } from "../ui/Card";
+import {
+  Card,
+} from "../ui/Card";
 interface ExperienceProps {
   theme: string;
 }
 
 const Experience = ({ theme }: ExperienceProps) => {
-  console.log(theme);
   const experiences = [
     {
       title: "Backend Developer",
@@ -33,28 +34,33 @@ const Experience = ({ theme }: ExperienceProps) => {
   ];
   return (
     <>
-      <section className="w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {experiences.map((exp, index) => (
-          <Card
-            key={index}
-            className={` p-6 rounded-xl shadow-none flex flex-col bg-${theme} text-${theme}-foreground ${
-              theme === "primary" ? "border-gray-600" : "border"
-            }`}
-          >
-            <div className="flex items-center gap-4">
-              {exp.icon}
-              <h3 className="text-xl font-semibold">{exp.title}</h3>
-            </div>
-            <p className="text-sm text-gray-600">
-              {exp.company} ({exp.duration})
-            </p>
-            <ul className="mt-2 text-sm list-disc pl-4 space-y-1">
-              {exp.description.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </Card>
-        ))}
+      <section className="w-full items-center justify-start">
+      <h2 className="pl-6 text-2xl font-bold">Experience</h2>
+        <div
+          className={`w-full px-6 pt-3 pb-1 grid grid-cols-1 md:grid-cols-2 gap-6 bg-${theme} text-${theme}-foreground`}
+        >
+          {experiences.map((exp, index) => (
+              <Card
+                key={index}
+                className={` p-6 rounded-xl shadow-none flex flex-col bg-${theme} text-${theme}-foreground ${
+                  theme === "primary" ? "border-gray-600" : "border"
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  {exp.icon}
+                  <h3 className="text-xl font-semibold">{exp.title}</h3>
+                </div>
+                <p className="text-sm text-gray-600">
+                  {exp.company} ({exp.duration})
+                </p>
+                <ul className="mt-2 text-sm list-disc pl-4 space-y-1">
+                  {exp.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+        </div>
       </section>
     </>
   );
