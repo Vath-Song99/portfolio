@@ -27,7 +27,6 @@ const Education = ({ theme }: EducationProps) => {
           </CardHeader>
 
           <CardContent className="space-y-6">
-            {/* Education Item */}
             <div className="flex items-center gap-4">
               <Image
                 src="https://upload.wikimedia.org/wikipedia/en/a/a2/RUPP_logo.PNG"
@@ -46,7 +45,6 @@ const Education = ({ theme }: EducationProps) => {
               </div>
             </div>
 
-            {/* Another Education Item */}
             <div className="flex items-center gap-4">
               <Image
                 src="https://sabaicode.com/sabaicode.jpg"
@@ -65,7 +63,15 @@ const Education = ({ theme }: EducationProps) => {
           </CardContent>
 
           <CardFooter className="w-full flex items-center justify-center">
-            <button className="text-xs opacity-80 hover:underline ">
+            <button
+              className="text-xs opacity-50 hover:underline "
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1lk1A--i3l8r0ErDAu_sXxsCEYHUtnQH6/view?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
               View Certificates
             </button>
           </CardFooter>
