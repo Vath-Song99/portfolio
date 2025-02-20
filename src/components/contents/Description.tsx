@@ -23,12 +23,10 @@ const Description = ({ theme }: DescriptionProps) => {
     <>
       <section className="w-full flex items-center justify-center">
         <Card
-          className={`w-full flex items-center justify-between  border-none p-0 bg-${theme} text-${theme}-foreground ${
-            theme === "secondary" ? "shadow-sm" : ""
-          }`}
+          className={`w-full flex items-center justify-between border-none shadow-none p-0 bg-${theme} text-${theme}-foreground`}
         >
           <CardHeader>
-            <CardTitle className="text-2xl font-extrabold font-mono tracking-wide">
+            <CardTitle className="text-2xl font-extrabold font-mono tracking-wide ">
               Smoeury Songvat
             </CardTitle>
             <CardDescription >
@@ -39,12 +37,6 @@ const Description = ({ theme }: DescriptionProps) => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <button
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/smoeury-songvat-a79aa0261",
-                      "_blank"
-                    )
-                  }
                 >
                   <CardContent className="p-0 relative">
                     <Avatar className="w-16 h-16">
@@ -56,18 +48,23 @@ const Description = ({ theme }: DescriptionProps) => {
                 </button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>
+                <button onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/smoeury-songvat-a79aa0261",
+                      "_blank"
+                    )
+                  }>
                   I&apos;m online<span className="text-[11px]">🟢</span>,
                   let&apos;s connect now
-                </p>
+                </button>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </Card>
       </section>
       <section className="w-full flex items-center justify-center">
-        <article className="px-6 text-wrap text-xl font-mono">
-          Passionate about building efficient, scalable solutions that drive
+        <article className="px-6 text-wrap text-2xl font-light">
+          👨‍💻 Passionate about building efficient, scalable solutions that drive
           seamless digital experiences.
           <span className="text-slate-400">
             Focused on performance, reliability, and clean code, with a

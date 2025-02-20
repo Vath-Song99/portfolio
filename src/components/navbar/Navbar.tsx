@@ -51,13 +51,13 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
           className={`flex items-center justify-center gap-1 px-1.5 py-1 rounded-md ${bgTheme}`}
         >
           <Globe size={12} />
-          <time className="text-[10px]">GMT+7</time>
+          <p className="text-[10px]">GMT+7</p>
         </div>
         <div
           className={`flex items-center justify-center gap-1 px-1.5 py-1 rounded-md ${bgTheme}`}
         >
           <Clock size={12} />
-          <time cz-shortcut-listen="true" className="text-[10px]">{time}</time>
+          <time className="text-[10px]">{time}</time>
         </div>
       </section>
     </header>
