@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Journey = () => {
-  return (
-    <div>Journey</div>
-  )
+interface JourneyProps {
+  theme: string;
 }
 
-export  { Journey }
+const Journey = ({ theme }: JourneyProps) => {
+  return (
+    <>
+      <section>{theme}</section>
+    </>
+  );
+};
+
+export { Journey };
