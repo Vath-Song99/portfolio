@@ -15,7 +15,7 @@ interface EducationProps {
 const Education = ({ theme }: EducationProps) => {
   return (
     <>
-      <section className="w-full flex items-center justify-start">
+      <section className="w-full flex justify-start">
         <Card
           className={`w-full max-w-lg border-none shadow-none rounded-2xl bg-${theme} text-${theme}-foreground`}
         >
@@ -44,7 +44,6 @@ const Education = ({ theme }: EducationProps) => {
                 </p>
               </div>
             </div>
-
             <div className="flex items-center gap-4">
               <Image
                 src="https://sabaicode.com/sabaicode.jpg"
@@ -61,7 +60,6 @@ const Education = ({ theme }: EducationProps) => {
               </div>
             </div>
           </CardContent>
-
           <CardFooter className="w-full flex items-center justify-center">
             <button
               className="text-xs opacity-50 hover:underline "
