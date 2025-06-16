@@ -11,7 +11,7 @@ export default function Home() {
     setTheme((prev) => (prev === "primary" ? "secondary" : "primary"));
   };
   return (
-    <main className={`w-screen bg-${theme} text-${theme}-foreground`}>
+    <main className={`w-screen bg-${theme} text-${theme}-foreground `}>
       <Navbar theme={theme} toggleTheme={toggleTheme}></Navbar>
       <Content theme={theme}></Content>
     </main>

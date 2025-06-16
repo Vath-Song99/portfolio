@@ -2,6 +2,7 @@ import React from "react";
 import { Description } from "./Description";
 import { motion } from "motion/react";
 import { Education } from "./Education";
+import { Experience } from "./Experience";
 
 interface ContentProps {
   theme: string;
@@ -21,6 +22,7 @@ const Content = ({ theme }: ContentProps) => {
       >
         <Description theme={theme} />
         <Education theme={theme} />
+        <Experience theme={theme} />
       </motion.div>
     </main>
   );

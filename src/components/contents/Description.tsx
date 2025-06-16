@@ -25,7 +25,7 @@ const Description = ({ theme }: DescriptionProps) => {
         <Card
           className={`w-full flex items-center justify-between border-none shadow-none p-0 bg-${theme} text-${theme}-foreground`}
         >
-          <CardHeader>
+          <CardHeader className="p-0">
             <CardTitle className="text-2xl font-extrabold font-mono tracking-wide ">
               Smoeury Songvat
             </CardTitle>
@@ -63,7 +63,7 @@ const Description = ({ theme }: DescriptionProps) => {
         </Card>
       </section>
       <section className="w-full flex items-center justify-center">
-        <article className="px-6 text-wrap text-2xl font-light">
+        <article className="px-3 pt-3 text-wrap text-2xl font-light">
           👨‍💻 Passionate about building efficient, scalable solutions that drive
           seamless digital experiences.
           <span className="text-slate-400">
