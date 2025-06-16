@@ -56,7 +56,6 @@ const Education = ({ theme }: EducationProps) => {
                 </p>
               </div>
             </div>
-
             <div className="flex items-center gap-4">
               <Image
                 src="https://sabaicode.com/sabaicode.jpg"
