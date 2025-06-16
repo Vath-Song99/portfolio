@@ -21,9 +21,8 @@ const Content = ({ theme }: ContentProps) => {
         }}
       >
         <Description theme={theme} />
-        <Experience theme={theme}/>
         <Education theme={theme} />
-        <Experience theme={theme} />
+        <Experience theme={theme}/>
       </motion.div>
     </main>
   );
